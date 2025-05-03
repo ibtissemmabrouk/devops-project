@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Express App</title>
+</head>
+<body>
+    <h1>🌟 Welcome to My Beautiful Express App!</h1>
+    <p>Here is a list of Tasks:</p>
+    <ul id="user-list"></ul>
+
+    <script>
+        fetch('/tasks')
+            .then(res => res.json())
+            .then(users => {
+                const list = document.getElementById('user-list');
+                users.forEach(user => {
+                    const li = document.createElement('li');
+                    li.textContent = `${user.id} ${user.title} ${user.completed}`;
+                    list.appendChild(li);
+                });
+            });
+    </script>

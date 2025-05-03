@@ -76,11 +76,11 @@ Containers with port mappings (3000/5000)
 
 `npm install`
 
-`npm start
-`
+`npm start`
+
 ### Backend Setup
-`cd backend
-`
+`cd backend`
+
 `npm install`
 
 `npm start`
